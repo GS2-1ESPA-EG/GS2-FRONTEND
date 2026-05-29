@@ -1,7 +1,7 @@
 # OrbitStock — Site de Apresentação
 
 Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31 (cápsula C209).  
-Desenvolvido como projeto da **Global Solution 2026 — FIAP MIAO**.
+Desenvolvido como projeto da **Global Solution 2026 — FIAP **.
 
 ---
 
@@ -92,4 +92,4 @@ Global Solution 2026 na FIAP. Combina:
 
 ---
 
-*Global Solution 2026 · FIAP MIAO · © 2026 OrbitStock*
+*Global Solution 2026 · FIAP · © 2026 OrbitStock*
