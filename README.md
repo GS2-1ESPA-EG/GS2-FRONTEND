@@ -9,7 +9,8 @@ Desenvolvido como projeto da **Global Solution 2026 — FIAP MIAO**.
 
 | Nome Completo | RM |
 |---|---|
-| Gustavo Hiruo Nishiyama Morishita | _(preencher RM)_ |
+| Gustavo Hiruo  | 567625 |
+| Enrico Dellatorre  | 566824 |
 
 ---
 
