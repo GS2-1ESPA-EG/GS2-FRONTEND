@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitStock — Os objetivos do projeto: monitoramento em tempo real, alertas preventivos, interface do astronauta e análise preditiva com IA.">
+    <title>OrbitStock | Objetivos</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <div class="container">
+        <nav class="nav" role="navigation" aria-label="Navegação principal">
+            <a href="../../index.html" class="nav__logo" aria-label="OrbitStock — página inicial">
+                <img src="../assets/images/logo.svg" alt="Logo OrbitStock" class="nav__logo-img">
+                <span class="nav__logo-text">Orbit<span>Stock</span></span>
+            </a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="nav-menu" role="list">
+                <li><a href="../../index.html" class="nav-link">Problema</a></li>
+                <li><a href="tecnologia.html" class="nav-link">Tecnologia</a></li>
+                <li><a href="objetivos.html" class="nav-link">Objetivos</a></li>
+                <li><a href="beneficios.html" class="nav-link">Benefícios</a></li>
+                <li><a href="aplicacao.html" class="nav-link">Aplicação</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-title">
+        <canvas id="stars-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    Nossa Missão
+                </div>
+                <h1 id="hero-title" class="hero__title">
+                    Objetivos do OrbitStock
+                </h1>
+                <p class="hero__subtitle">
+                    Transformar a gestão de carga espacial através de dados em tempo real, automação inteligente e uma interface humanizada para os astronautas da Dragon C209.
+                </p>
+                <div class="hero__cta">
+                    <a href="#objectives" class="btn btn--primary">Ver Objetivos</a>
+                    <a href="#timeline" class="btn btn--secondary">Jornada de Desenvolvimento</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <img src="../assets/icons/rocket.svg"
+                     alt="Ícone de foguete representando os objetivos e missão do projeto OrbitStock"
+                     class="hero__img"
+                     style="max-width:280px">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MISSION STATEMENT ── -->
+    <section class="section section--alt" aria-labelledby="mission-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Declaração de Missão</span>
+                <h2 id="mission-title" class="section__title">Nossa Razão de Existir</h2>
+            </div>
+            <div class="quote-block" data-animate>
+                <span class="quote-block__icon" aria-hidden="true">"</span>
+                <p class="quote-block__text">
+                    Garantir a segurança e a eficiência operacional da Dragon C209 através de monitoramento contínuo de telemetria, alertas preventivos automáticos e análise preditiva por Inteligência Artificial — reduzindo riscos para a tripulação e aumentando o sucesso da missão.
+                </p>
+                <cite class="quote-block__author">— Missão OrbitStock · Global Solution 2026</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── OBJECTIVES WITH PROGRESS ── -->
+    <section class="section" id="objectives" aria-labelledby="objectives-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Objetivos Alcançados</span>
+                <h2 id="objectives-title" class="section__title">
+                    Quatro Pilares da <span>Solução</span>
+                </h2>
+                <p class="section__subtitle">
+                    Cada objetivo foi cuidadosamente planejado para resolver um aspecto crítico do gerenciamento de carga espacial.
+                </p>
+            </div>
+
+            <div class="cards-grid cards-grid--2" style="margin-bottom: var(--space-16);">
+                <article class="card" data-animate data-delay="1">
+                    <div class="card__icon">
+                        <img src="../assets/icons/satellite.svg" alt="Ícone de satélite para monitoramento em tempo real" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Objetivo 1</span>
+                    <h3 class="card__title">Monitoramento em Tempo Real</h3>
+                    <p class="card__text">
+                        Telemetria completa dos 12 compartimentos da Dragon C209 com atualização a cada 3 segundos. Temperatura, umidade, impacto e status de porta — tudo visível no dashboard em qualquer momento.
+                    </p>
+                </article>
+
+                <article class="card card--orange" data-animate data-delay="2">
+                    <div class="card__icon card__icon--orange">
+                        <img src="../assets/icons/bell.svg" alt="Ícone de sino de alerta preventivo" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Objetivo 2</span>
+                    <h3 class="card__title">Alertas Preventivos Automáticos</h3>
+                    <p class="card__text">
+                        Sistema de alertas em 4 tipos (temperatura, umidade, porta, impacto) com 2 níveis de severidade (warning e critical). Gerado automaticamente a cada ciclo de leitura sem intervenção humana.
+                    </p>
+                </article>
+
+                <article class="card card--green" data-animate data-delay="3">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/users.svg" alt="Ícone de astronauta usando interface de inventário" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Objetivo 3</span>
+                    <h3 class="card__title">Interface do Astronauta</h3>
+                    <p class="card__text">
+                        AstronautApp: interface dark que simula tablet de bordo. Cronômetro T+ em tempo real, busca por nome/código/compartimento, filtros por categoria e baixa de consumo com atualização instantânea.
+                    </p>
+                </article>
+
+                <article class="card card--green" data-animate data-delay="4">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/brain.svg" alt="Ícone de rede neural para análise preditiva com IA" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Objetivo 4</span>
+                    <h3 class="card__title">Análise Preditiva com IA</h3>
+                    <p class="card__text">
+                        Regressão linear sobre histórico de telemetria para projetar temperatura. Claude AI gera relatório com nível de risco, resumo executivo, recomendações priorizadas e nota de confiança baseada no R².
+                    </p>
+                </article>
+            </div>
+
+            <!-- Progress bars -->
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Status de Implementação</span>
+                <h2 class="section__title">Metas Atingidas</h2>
+            </div>
+
+            <div data-animate style="max-width: 720px; margin: 0 auto;">
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-label">Monitoramento em Tempo Real</span>
+                        <span class="progress-value">100%</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso: Monitoramento em Tempo Real">
+                        <div class="progress-fill" data-progress="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-label">Sistema de Alertas Automáticos</span>
+                        <span class="progress-value">100%</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso: Sistema de Alertas">
+                        <div class="progress-fill" data-progress="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-label">Interface do Astronauta (AstronautApp)</span>
+                        <span class="progress-value">100%</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso: AstronautApp">
+                        <div class="progress-fill progress-fill--green" data-progress="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-label">Análise Preditiva com Claude AI</span>
+                        <span class="progress-value">100%</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso: Análise Preditiva com IA">
+                        <div class="progress-fill progress-fill--green" data-progress="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-label">Integração FIWARE Orion / Wokwi</span>
+                        <span class="progress-value">100%</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso: Integração FIWARE">
+                        <div class="progress-fill" data-progress="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TIMELINE ── -->
+    <section class="section section--alt" id="timeline" aria-labelledby="timeline-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Linha do Tempo</span>
+                <h2 id="timeline-title" class="section__title">
+                    Jornada de Desenvolvimento
+                </h2>
+            </div>
+
+            <div class="timeline" role="list">
+                <div class="timeline-item" data-animate role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 1</div>
+                        <h3 class="timeline-content__title">Arquitetura e Modelagem</h3>
+                        <p class="timeline-content__text">Definição da arquitetura fullstack, modelagem do banco de dados (spacecraft, compartments, items, events, state) e configuração do ambiente de desenvolvimento.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="1" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 2</div>
+                        <h3 class="timeline-content__title">Backend API + Banco de Dados</h3>
+                        <p class="timeline-content__text">Implementação da API REST com Express 5 e TypeScript. Banco SQLite nativo com seed da Dragon C209: 12 compartimentos, 39 itens e 1.138 unidades.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="2" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 3</div>
+                        <h3 class="timeline-content__title">Integração FIWARE + Telemetria</h3>
+                        <p class="timeline-content__text">Orion Poller Service com polling a cada 3s, processamento de telemetria e persistência de eventos. Sistema de alertas automáticos com 4 tipos e 2 níveis de severidade.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="3" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 4</div>
+                        <h3 class="timeline-content__title">Dashboard React</h3>
+                        <p class="timeline-content__text">Dashboard de controle de missão com KPIs em tempo real, cards por nave, gráficos de telemetria (Recharts) e visualização de compartimentos com status individual.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="4" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">5</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 5</div>
+                        <h3 class="timeline-content__title">AstronautApp</h3>
+                        <p class="timeline-content__text">Interface de bordo com tema dark, cronômetro T+ de missão, busca e filtros de inventário, baixa de consumo com atualização imediata e painel de alertas com resolução.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="5" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">6</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 6</div>
+                        <h3 class="timeline-content__title">Análise Preditiva com Claude AI</h3>
+                        <p class="timeline-content__text">Regressão linear sobre histórico de telemetria e consumo. Integração com Claude para gerar relatórios em linguagem natural com nível de risco e recomendações priorizadas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate data-delay="6" role="listitem">
+                    <div class="timeline-dot" aria-hidden="true">7</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content__week">Fase 7</div>
+                        <h3 class="timeline-content__title">Testes, Refinamentos e Entrega</h3>
+                        <p class="timeline-content__text">Validação de todos os endpoints, refinamento da UX, documentação do sistema, criação do site de apresentação e preparação para a entrega da Global Solution 2026.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── KPI TARGETS ── -->
+    <section class="section" aria-labelledby="kpi-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Metas Técnicas</span>
+                <h2 id="kpi-title" class="section__title">KPIs de Performance</h2>
+            </div>
+            <div class="kpi-grid" data-animate>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">&lt;3s</div>
+                    <div class="kpi-item__label">Latência de atualização de telemetria</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">±0.5°C</div>
+                    <div class="kpi-item__label">Precisão de leitura de temperatura</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">4</div>
+                    <div class="kpi-item__label">Tipos de alertas automáticos</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">12</div>
+                    <div class="kpi-item__label">Compartimentos monitorados simultaneamente</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">100%</div>
+                    <div class="kpi-item__label">Rastreabilidade de consumo</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value">R²</div>
+                    <div class="kpi-item__label">Nota de confiança nas previsões de IA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <span class="cta-section__eyebrow">Resultados</span>
+            <h2 id="cta-title" class="cta-section__title">Veja o Impacto Real</h2>
+            <p class="cta-section__text">Todos os objetivos foram alcançados. Conheça como o OrbitStock transforma a segurança e a eficiência da missão espacial.</p>
+            <div class="cta-section__buttons">
+                <a href="beneficios.html" class="btn btn--primary">Ver Benefícios</a>
+                <a href="aplicacao.html" class="btn btn--ghost">Ver Aplicação</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="../assets/images/logo.svg" alt="Logo OrbitStock" width="32" height="32">
+                    Orbit<span>Stock</span>
+                </div>
+                <p class="footer__tagline">Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31.</p>
+            </div>
+            <nav class="footer__links" aria-label="Páginas do site">
+                <h3 class="footer__links-title">Páginas</h3>
+                <ul class="footer__links-list">
+                    <li><a href="../../index.html">O Problema</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="beneficios.html">Benefícios</a></li>
+                    <li><a href="aplicacao.html">Aplicação</a></li>
+                </ul>
+            </nav>
+            <div class="footer__links">
+                <h3 class="footer__links-title">Projeto</h3>
+                <ul class="footer__links-list">
+                    <li><a href="../../index.html">Global Solution 2026</a></li>
+                    <li><a href="../../index.html">FIAP MIAO</a></li>
+                    <li><a href="tecnologia.html">Stack Técnico</a></li>
+                    <li><a href="aplicacao.html">Demo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 OrbitStock · Todos os direitos reservados</p>
+            <p class="footer__fiap">Desenvolvido para a <a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a> · Global Solution 2026 · Turma MIAO</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+

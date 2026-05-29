@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitStock — O problema da gestão de carga espacial na missão CRS-31. Por que gerenciar suprimentos na Dragon C209 exige uma solução inteligente.">
+    <title>OrbitStock | O Problema</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════ -->
+<header id="site-header">
+    <div class="container">
+        <nav class="nav" role="navigation" aria-label="Navegação principal">
+            <a href="index.html" class="nav__logo" aria-label="OrbitStock — página inicial">
+                <img src="src/assets/images/logo.svg" alt="Logo OrbitStock — planeta com órbita" class="nav__logo-img">
+                <span class="nav__logo-text">Orbit<span>Stock</span></span>
+            </a>
+
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu de navegação">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul id="nav-menu" role="list">
+                <li><a href="index.html" class="nav-link">Problema</a></li>
+                <li><a href="src/pages/tecnologia.html" class="nav-link">Tecnologia</a></li>
+                <li><a href="src/pages/objetivos.html" class="nav-link">Objetivos</a></li>
+                <li><a href="src/pages/beneficios.html" class="nav-link">Benefícios</a></li>
+                <li><a href="src/pages/aplicacao.html" class="nav-link">Aplicação</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ══════════════════════════════════════
+         HERO
+         ══════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+        <canvas id="stars-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge" role="text">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    Missão CRS-31 · Dragon C209
+                </div>
+                <h1 id="hero-title" class="hero__title">
+                    O Problema da Gestão de Carga Espacial
+                </h1>
+                <p class="hero__subtitle">
+                    Gerenciar <strong>1.138 unidades</strong> de suprimentos em microgravidade, sem sistemas inteligentes de monitoramento, representa um risco real para a segurança dos astronautas e o sucesso da missão.
+                </p>
+                <div class="hero__cta">
+                    <a href="src/pages/tecnologia.html" class="btn btn--primary">
+                        Ver a Solução
+                        <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="#problems" class="btn btn--secondary">Entender o Problema</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <img src="src/assets/images/dragon.svg"
+                     alt="Ilustração da cápsula espacial Dragon C209 com painéis solares e detalhes técnicos"
+                     class="hero__img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STATS BAR
+         ══════════════════════════════════════ -->
+    <div class="stats-bar" role="region" aria-label="Números da missão">
+        <div class="container">
+            <div class="stat-item" data-animate>
+                <span class="stat-item__number" data-target="12" aria-label="12">0</span>
+                <span class="stat-item__label">Compartimentos monitorados</span>
+            </div>
+            <div class="stat-item" data-animate data-delay="1">
+                <span class="stat-item__number" data-target="39" aria-label="39">0</span>
+                <span class="stat-item__label">Tipos de itens rastreados</span>
+            </div>
+            <div class="stat-item stat-item--green" data-animate data-delay="2">
+                <span class="stat-item__number" data-target="1138" aria-label="1.138">0</span>
+                <span class="stat-item__label">Unidades a bordo</span>
+            </div>
+            <div class="stat-item stat-item--orange" data-animate data-delay="3">
+                <span class="stat-item__number" data-target="0" aria-label="Zero">0</span>
+                <span class="stat-item__label">Margem para erro</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         PROBLEM CARDS
+         ══════════════════════════════════════ -->
+    <section class="section" id="problems" aria-labelledby="problems-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Os Desafios</span>
+                <h2 id="problems-title" class="section__title">
+                    Por que a Logística Espacial é <span>Crítica</span>
+                </h2>
+                <p class="section__subtitle">
+                    Quatro obstáculos que tornaram indispensável o desenvolvimento de um sistema inteligente de gerenciamento de carga para a Dragon C209.
+                </p>
+            </div>
+
+            <div class="cards-grid cards-grid--2">
+                <article class="card card--orange" data-animate data-delay="1">
+                    <div class="card__icon card__icon--orange">
+                        <img src="src/assets/icons/box.svg" alt="Ícone de caixa de cargo" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Risco Operacional</span>
+                    <h3 class="card__title">Controle Manual Ineficiente</h3>
+                    <p class="card__text">
+                        Astronautas dependiam de checklists em papel e planilhas desconectadas, sem atualização em tempo real. Um erro de contagem podia resultar em falta crítica de suprimentos no meio de uma missão.
+                    </p>
+                </article>
+
+                <article class="card card--orange" data-animate data-delay="2">
+                    <div class="card__icon card__icon--orange">
+                        <img src="src/assets/icons/bell.svg" alt="Ícone de alerta" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Resposta Tardia</span>
+                    <h3 class="card__title">Ausência de Alertas Preventivos</h3>
+                    <p class="card__text">
+                        Falhas de temperatura ou umidade nos compartimentos eram descobertas apenas na inspeção manual periódica. O dano a equipamentos científicos e medicamentos acontecia antes de qualquer reação.
+                    </p>
+                </article>
+
+                <article class="card" data-animate data-delay="3">
+                    <div class="card__icon">
+                        <img src="src/assets/icons/wifi.svg" alt="Ícone de comunicação via satélite" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Comunicação</span>
+                    <h3 class="card__title">Latência de Comunicação Terra-Órbita</h3>
+                    <p class="card__text">
+                        O atraso de comunicação de 4 a 24 minutos com a Terra impossibilita qualquer resposta imediata a incidentes. A tripulação precisa de autonomia total para tomar decisões críticas sem suporte terrestre.
+                    </p>
+                </article>
+
+                <article class="card" data-animate data-delay="4">
+                    <div class="card__icon">
+                        <img src="src/assets/icons/chart.svg" alt="Ícone de gráfico de consumo" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Consumo</span>
+                    <h3 class="card__title">Risco de Depleção de Suprimentos</h3>
+                    <p class="card__text">
+                        Sem rastreamento automático de consumo, itens críticos como medicamentos, alimentos e água podiam esgotar sem aviso prévio. A previsão de reabastecimento era apenas estimativa.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTEXT SECTION
+         ══════════════════════════════════════ -->
+    <section class="section section--alt" aria-labelledby="context-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Contexto da Missão</span>
+                <h2 id="context-title" class="section__title">
+                    A Dragon C209 em Números
+                </h2>
+            </div>
+
+            <div class="kpi-grid" data-animate>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="6" data-suffix="h">0</div>
+                    <div class="kpi-item__label">Janela de atualização manual anterior</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="3" data-suffix="s">0</div>
+                    <div class="kpi-item__label">Polling com OrbitStock</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="4" data-suffix=" níveis">0</div>
+                    <div class="kpi-item__label">de alerta automático</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="100" data-suffix="%">0</div>
+                    <div class="kpi-item__label">dos compartimentos monitorados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         QUOTE
+         ══════════════════════════════════════ -->
+    <section class="section" aria-label="Perspectiva sobre o problema">
+        <div class="container">
+            <div class="quote-block" data-animate>
+                <span class="quote-block__icon" aria-hidden="true">"</span>
+                <p class="quote-block__text">
+                    A logística espacial é tão crítica quanto o próprio sistema de suporte de vida. Operar sem dados em tempo real sobre estoque, temperatura e integridade dos compartimentos não é apenas ineficiente — é perigoso.
+                </p>
+                <cite class="quote-block__author">— Perspectiva da Equipe OrbitStock · FIAP MIAO 2026</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CTA — SOLUÇÃO
+         ══════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <span class="cta-section__eyebrow">A Resposta</span>
+            <h2 id="cta-title" class="cta-section__title">Conheça o OrbitStock</h2>
+            <p class="cta-section__text">
+                Um sistema integrado de gerenciamento de carga espacial com IoT em tempo real, dashboard de missão e análise preditiva por Inteligência Artificial.
+            </p>
+            <div class="cta-section__buttons">
+                <a href="src/pages/tecnologia.html" class="btn btn--primary">Ver a Tecnologia</a>
+                <a href="src/pages/beneficios.html" class="btn btn--ghost">Ver os Benefícios</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════ -->
+<footer id="site-footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="src/assets/images/logo.svg" alt="Logo OrbitStock" width="32" height="32">
+                    Orbit<span>Stock</span>
+                </div>
+                <p class="footer__tagline">
+                    Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31. Monitoramento em tempo real, alertas preventivos e análise preditiva com IA.
+                </p>
+            </div>
+
+            <nav class="footer__links" aria-label="Páginas do site">
+                <h3 class="footer__links-title">Páginas</h3>
+                <ul class="footer__links-list">
+                    <li><a href="index.html">O Problema</a></li>
+                    <li><a href="src/pages/tecnologia.html">Tecnologia</a></li>
+                    <li><a href="src/pages/objetivos.html">Objetivos</a></li>
+                    <li><a href="src/pages/beneficios.html">Benefícios</a></li>
+                    <li><a href="src/pages/aplicacao.html">Aplicação</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__links">
+                <h3 class="footer__links-title">Tecnologias</h3>
+                <ul class="footer__links-list">
+                    <li><a href="src/pages/tecnologia.html">React 19 + TypeScript</a></li>
+                    <li><a href="src/pages/tecnologia.html">FIWARE Orion (NGSIv2)</a></li>
+                    <li><a href="src/pages/tecnologia.html">Claude AI (Anthropic)</a></li>
+                    <li><a href="src/pages/tecnologia.html">Node.js 22 + SQLite</a></li>
+                    <li><a href="src/pages/tecnologia.html">ESP32 + Wokwi IoT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                &copy; 2026 OrbitStock · Todos os direitos reservados
+            </p>
+            <p class="footer__fiap">
+                Desenvolvido para a <a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a> · Global Solution 2026 · Turma MIAO
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="src/js/main.js"></script>
+</body>
+</html>

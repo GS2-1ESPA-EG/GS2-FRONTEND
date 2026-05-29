@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" fill="none">
+  <defs>
+    <radialGradient id="bodyGrad" cx="30%" cy="25%" r="80%">
+      <stop offset="0%" stop-color="#1a4060"/>
+      <stop offset="100%" stop-color="#060e1a"/>
+    </radialGradient>
+    <radialGradient id="coneGrad" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#2a5070"/>
+      <stop offset="100%" stop-color="#0a1e30"/>
+    </radialGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ambient glow behind capsule -->
+  <ellipse cx="200" cy="230" rx="160" ry="180" fill="url(#glowGrad)"/>
+
+  <!-- ── MAIN CAPSULE BODY ── -->
+  <!-- trunk section (lower cylinder) -->
+  <rect x="110" y="290" width="180" height="100" rx="8" fill="url(#bodyGrad)" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <!-- solar panel grid on trunk -->
+  <line x1="130" y1="290" x2="130" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="155" y1="290" x2="155" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="180" y1="290" x2="180" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="205" y1="290" x2="205" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="230" y1="290" x2="230" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="255" y1="290" x2="255" y2="390" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="110" y1="320" x2="290" y2="320" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="110" y1="350" x2="290" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- crew capsule (upper rounded body) -->
+  <path d="M115 150 L115 295 Q115 300 120 300 L280 300 Q285 300 285 295 L285 150 C285 100 240 70 200 70 C160 70 115 100 115 150Z" fill="url(#bodyGrad)" stroke="#00d4ff" stroke-width="2"/>
+
+  <!-- nose cone -->
+  <path d="M165 70 C165 70 200 20 200 20 C200 20 235 70 235 70Z" fill="url(#coneGrad)" stroke="#00d4ff" stroke-width="1.5"/>
+  <path d="M180 70 C180 70 200 30 200 30 C200 30 220 70 220 70Z" fill="#00d4ff" opacity="0.1"/>
+
+  <!-- capsule windows -->
+  <circle cx="168" cy="180" r="18" fill="#060e1a" stroke="#00d4ff" stroke-width="2"/>
+  <circle cx="168" cy="180" r="14" fill="#0d2035"/>
+  <circle cx="168" cy="180" r="10" fill="#00d4ff" opacity="0.08"/>
+  <circle cx="163" cy="175" r="4" fill="#00d4ff" opacity="0.35"/>
+
+  <circle cx="232" cy="180" r="18" fill="#060e1a" stroke="#00d4ff" stroke-width="2"/>
+  <circle cx="232" cy="180" r="14" fill="#0d2035"/>
+  <circle cx="232" cy="180" r="10" fill="#00d4ff" opacity="0.08"/>
+  <circle cx="227" cy="175" r="4" fill="#00d4ff" opacity="0.35"/>
+
+  <!-- center window -->
+  <rect x="184" y="220" width="32" height="22" rx="4" fill="#060e1a" stroke="#00d4ff" stroke-width="1.5"/>
+  <rect x="188" y="224" width="24" height="14" rx="3" fill="#00d4ff" opacity="0.08"/>
+  <!-- screen glow inside center window -->
+  <rect x="192" y="227" width="16" height="8" rx="2" fill="#00ff88" opacity="0.25"/>
+
+  <!-- abort tower -->
+  <line x1="200" y1="20" x2="200" y2="6" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="200" cy="4" r="4" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- solar array wings -->
+  <!-- left wing -->
+  <rect x="30" y="300" width="80" height="50" rx="4" fill="#060e1a" stroke="#00d4ff" stroke-width="1.5" opacity="0.85"/>
+  <line x1="50" y1="300" x2="50" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="70" y1="300" x2="70" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="90" y1="300" x2="90" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="30" y1="315" x2="110" y2="315" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="30" y1="333" x2="110" y2="333" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <!-- connector left -->
+  <rect x="108" y="315" width="4" height="20" rx="1" fill="#00d4ff" opacity="0.5"/>
+
+  <!-- right wing -->
+  <rect x="290" y="300" width="80" height="50" rx="4" fill="#060e1a" stroke="#00d4ff" stroke-width="1.5" opacity="0.85"/>
+  <line x1="310" y1="300" x2="310" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="330" y1="300" x2="330" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="350" y1="300" x2="350" y2="350" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="290" y1="315" x2="370" y2="315" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="290" y1="333" x2="370" y2="333" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <!-- connector right -->
+  <rect x="288" y="315" width="4" height="20" rx="1" fill="#00d4ff" opacity="0.5"/>
+
+  <!-- heat shield bottom -->
+  <ellipse cx="200" cy="392" rx="85" ry="12" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="1.5"/>
+  <ellipse cx="200" cy="392" rx="70" ry="8" fill="#ff6b35" opacity="0.1"/>
+
+  <!-- thruster pods (bottom) -->
+  <rect x="145" y="385" width="24" height="16" rx="4" fill="#0d1b2a" stroke="#00d4ff" stroke-width="1.5"/>
+  <circle cx="157" cy="393" r="5" fill="#ff6b35" opacity="0.6"/>
+  <rect x="231" y="385" width="24" height="16" rx="4" fill="#0d1b2a" stroke="#00d4ff" stroke-width="1.5"/>
+  <circle cx="243" cy="393" r="5" fill="#ff6b35" opacity="0.6"/>
+
+  <!-- "DRAGON C209" label -->
+  <rect x="155" y="258" width="90" height="22" rx="3" fill="#00d4ff" opacity="0.08" stroke="#00d4ff" stroke-width="0.8" opacity="0.4"/>
+  <text x="200" y="274" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#00d4ff" opacity="0.7" letter-spacing="1">DRAGON C209</text>
+
+  <!-- status lights -->
+  <circle cx="145" cy="260" r="4" fill="#00ff88" filter="url(#glow)"/>
+  <circle cx="255" cy="260" r="4" fill="#00ff88" filter="url(#glow)"/>
+
+  <!-- floating particles -->
+  <circle cx="60" cy="120" r="2" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="340" cy="90" r="1.5" fill="#00ff88" opacity="0.5"/>
+  <circle cx="80" cy="200" r="1" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="330" cy="180" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="40" cy="380" r="1.5" fill="#ff6b35" opacity="0.4"/>
+  <circle cx="360" cy="420" r="1" fill="#00d4ff" opacity="0.3"/>
+</svg>

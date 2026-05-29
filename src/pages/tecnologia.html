@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitStock — Conheça a arquitetura técnica: ESP32, FIWARE Orion, React, Claude AI e Node.js trabalhando juntos para monitorar a Dragon C209.">
+    <title>OrbitStock | Tecnologia</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <div class="container">
+        <nav class="nav" role="navigation" aria-label="Navegação principal">
+            <a href="../../index.html" class="nav__logo" aria-label="OrbitStock — página inicial">
+                <img src="../assets/images/logo.svg" alt="Logo OrbitStock" class="nav__logo-img">
+                <span class="nav__logo-text">Orbit<span>Stock</span></span>
+            </a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu de navegação">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="nav-menu" role="list">
+                <li><a href="../../index.html" class="nav-link">Problema</a></li>
+                <li><a href="tecnologia.html" class="nav-link">Tecnologia</a></li>
+                <li><a href="objetivos.html" class="nav-link">Objetivos</a></li>
+                <li><a href="beneficios.html" class="nav-link">Benefícios</a></li>
+                <li><a href="aplicacao.html" class="nav-link">Aplicação</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-title">
+        <canvas id="stars-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    Arquitetura Técnica
+                </div>
+                <h1 id="hero-title" class="hero__title">
+                    A Tecnologia por Trás do OrbitStock
+                </h1>
+                <p class="hero__subtitle">
+                    Uma arquitetura moderna que integra sensores IoT, Context Broker NGSIv2, dashboard em tempo real e <strong>Inteligência Artificial</strong> para monitoramento contínuo da Dragon C209.
+                </p>
+                <div class="hero__cta">
+                    <a href="#stack" class="btn btn--primary">Ver o Stack</a>
+                    <a href="#dataflow" class="btn btn--secondary">Fluxo de Dados</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <img src="../assets/icons/satellite.svg"
+                     alt="Satélite de comunicação com painéis solares e antena de transmissão"
+                     class="hero__img"
+                     style="max-width:320px">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ARCHITECTURE DIAGRAM ── -->
+    <section class="section section--alt" aria-labelledby="arch-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Visão Geral</span>
+                <h2 id="arch-title" class="section__title">Arquitetura do Sistema</h2>
+                <p class="section__subtitle">
+                    Cinco camadas integradas formam o pipeline de dados do sensor físico até a análise preditiva.
+                </p>
+            </div>
+
+            <div class="arch-diagram" data-animate role="img" aria-label="Diagrama de arquitetura: ESP32 envia para FIWARE Orion, que alimenta o Backend, que serve o React e alimenta a IA Claude">
+                <div class="arch-node">
+                    <img src="../assets/icons/chip.svg" alt="Ícone de microchip ESP32" class="arch-node__icon" width="40" height="40">
+                    <span class="arch-node__label">ESP32</span>
+                    <span class="arch-node__sub">Wokwi Sim</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                    <img src="../assets/icons/wifi.svg" alt="Ícone FIWARE Orion Context Broker" class="arch-node__icon" width="40" height="40">
+                    <span class="arch-node__label">FIWARE</span>
+                    <span class="arch-node__sub">Orion v2</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                    <img src="../assets/icons/database.svg" alt="Ícone de banco de dados Node.js backend" class="arch-node__icon" width="40" height="40">
+                    <span class="arch-node__label">Backend</span>
+                    <span class="arch-node__sub">Node.js 22</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">⇒</div>
+                <div class="arch-node">
+                    <img src="../assets/icons/chart.svg" alt="Ícone de dashboard React" class="arch-node__icon" width="40" height="40">
+                    <span class="arch-node__label">Dashboard</span>
+                    <span class="arch-node__sub">React 19</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">+</div>
+                <div class="arch-node">
+                    <img src="../assets/icons/brain.svg" alt="Ícone de inteligência artificial Claude" class="arch-node__icon" width="40" height="40">
+                    <span class="arch-node__label">Claude AI</span>
+                    <span class="arch-node__sub">Anthropic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TECH STACK ── -->
+    <section class="section" id="stack" aria-labelledby="stack-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Stack Técnico</span>
+                <h2 id="stack-title" class="section__title">
+                    Cada Componente com um <span>Propósito</span>
+                </h2>
+                <p class="section__subtitle">
+                    Tecnologias de ponta selecionadas para cada camada da arquitetura.
+                </p>
+            </div>
+
+            <div class="cards-grid cards-grid--3">
+                <article class="card" data-animate data-delay="1">
+                    <div class="card__icon">
+                        <img src="../assets/icons/chip.svg" alt="Ícone de microchip para ESP32" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Hardware IoT</span>
+                    <h3 class="card__title">ESP32 + Wokwi</h3>
+                    <p class="card__text">
+                        Microcontrolador ESP32 simulado no Wokwi emula os sensores físicos da Dragon: temperatura, umidade, acelerômetro (impacto) e sensor de porta. Publica dados via HTTP no FIWARE Orion.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">ESP32-WROOM</span>
+                        <span class="tech-tag">C/Arduino</span>
+                        <span class="tech-tag">NGSIv2</span>
+                    </div>
+                </article>
+
+                <article class="card" data-animate data-delay="2">
+                    <div class="card__icon">
+                        <img src="../assets/icons/wifi.svg" alt="Ícone do FIWARE Orion Context Broker" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Plataforma IoT</span>
+                    <h3 class="card__title">FIWARE Orion</h3>
+                    <p class="card__text">
+                        Context Broker NGSIv2 open-source da FIWARE. Centraliza o estado atual dos sensores em entidades contextuais. O backend faz polling a cada 3 segundos na entidade <code>DRAGON-C209:M-03</code>.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">NGSIv2</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">JSON-LD</span>
+                    </div>
+                </article>
+
+                <article class="card" data-animate data-delay="3">
+                    <div class="card__icon">
+                        <img src="../assets/icons/database.svg" alt="Ícone de backend Node.js com banco de dados" width="28" height="28">
+                    </div>
+                    <span class="badge badge--purple">Backend</span>
+                    <h3 class="card__title">Node.js 22 + Express</h3>
+                    <p class="card__text">
+                        API REST com Express 5 e TypeScript. Banco SQLite nativo via módulo <code>node:sqlite</code> do Node 22, sem dependências extras. Validação com Zod em todas as rotas.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node 22</span>
+                        <span class="tech-tag">Express 5</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Zod</span>
+                    </div>
+                </article>
+
+                <article class="card card--green" data-animate data-delay="4">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/chart.svg" alt="Ícone de dashboard com gráficos" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Frontend</span>
+                    <h3 class="card__title">React 19 + TypeScript</h3>
+                    <p class="card__text">
+                        Dashboard de controle de missão com Vite e Recharts. Atualização automática a cada 5 segundos. Interface do astronauta simulando tablet de bordo com tema dark e countdown T+.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React 19</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Recharts</span>
+                    </div>
+                </article>
+
+                <article class="card card--green" data-animate data-delay="5">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/brain.svg" alt="Ícone de rede neural para inteligência artificial" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Inteligência Artificial</span>
+                    <h3 class="card__title">Claude AI (Anthropic)</h3>
+                    <p class="card__text">
+                        Análise preditiva com regressão linear sobre histórico de telemetria. Claude gera relatórios em linguagem natural com nível de risco, recomendações priorizadas e nota de confiança (R²).
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">claude-sonnet</span>
+                        <span class="tech-tag">@anthropic-ai/sdk</span>
+                        <span class="tech-tag">Regressão Linear</span>
+                    </div>
+                </article>
+
+                <article class="card" data-animate data-delay="6">
+                    <div class="card__icon">
+                        <img src="../assets/icons/shield.svg" alt="Ícone de escudo representando monitoramento de alertas" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Alertas</span>
+                    <h3 class="card__title">Sistema de Alertas</h3>
+                    <p class="card__text">
+                        Gerado automaticamente a cada leitura do sensor. Quatro tipos: temperatura, umidade, porta aberta e impacto. Dois níveis de severidade: <strong>warning</strong> e <strong>critical</strong>.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">4 tipos</span>
+                        <span class="tech-tag">2 severidades</span>
+                        <span class="tech-tag">Tempo real</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── DATA FLOW ── -->
+    <section class="section section--alt" id="dataflow" aria-labelledby="flow-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Pipeline de Dados</span>
+                <h2 id="flow-title" class="section__title">
+                    Do Sensor ao <span>Relatório de IA</span>
+                </h2>
+            </div>
+
+            <div class="steps" role="list">
+                <div class="step" data-animate data-delay="1" role="listitem">
+                    <div class="step__number" aria-hidden="true">1</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Sensor Físico (ESP32 / Wokwi)</h3>
+                        <p class="step__text">O microcontrolador ESP32, simulado no Wokwi, lê temperatura, umidade, aceleração e status de porta do compartimento M-03 a cada ciclo de 3 segundos.</p>
+                    </div>
+                </div>
+                <div class="step" data-animate data-delay="2" role="listitem">
+                    <div class="step__number" aria-hidden="true">2</div>
+                    <div class="step__content">
+                        <h3 class="step__title">FIWARE Orion Context Broker</h3>
+                        <p class="step__text">O ESP32 publica os dados via PATCH HTTP para a entidade <code>urn:ngsi-ld:Compartment:DRAGON-C209:M-03</code>. O Orion mantém o estado mais recente de cada atributo contextual.</p>
+                    </div>
+                </div>
+                <div class="step" data-animate data-delay="3" role="listitem">
+                    <div class="step__number" aria-hidden="true">3</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Backend (Orion Poller Service)</h3>
+                        <p class="step__text">Um serviço Node.js faz polling no Orion a cada 3s com o header <code>fiware-service: smart</code>. Os dados são validados com Zod e persistidos no SQLite como eventos de telemetria.</p>
+                    </div>
+                </div>
+                <div class="step" data-animate data-delay="4" role="listitem">
+                    <div class="step__number" aria-hidden="true">4</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Alert Service</h3>
+                        <p class="step__text">A cada evento de telemetria, o serviço de alertas compara os valores com os limites nominais de cada compartimento (temp_min, temp_max, humidity_max, impact threshold) e gera alertas automaticamente.</p>
+                    </div>
+                </div>
+                <div class="step" data-animate data-delay="5" role="listitem">
+                    <div class="step__number" aria-hidden="true">5</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Dashboard React + AstronautApp</h3>
+                        <p class="step__text">O frontend exibe KPIs, telemetria das últimas 6h e status de todos os compartimentos em tempo real. O AstronautApp fornece inventário de bordo com busca, filtros e baixa de consumo.</p>
+                    </div>
+                </div>
+                <div class="step" data-animate data-delay="6" role="listitem">
+                    <div class="step__number" aria-hidden="true">6</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Análise Preditiva Claude AI</h3>
+                        <p class="step__text">Sob demanda, o backend roda regressão linear sobre o histórico de telemetria e consumo. O Claude analisa os resultados e gera um relatório em português com nível de risco, recomendações e nota de confiança baseada no R².</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FIWARE ENTITY ── -->
+    <section class="section" aria-labelledby="entity-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Integração FIWARE</span>
+                <h2 id="entity-title" class="section__title">Entidade NGSIv2 Monitorada</h2>
+            </div>
+            <div class="code-block" data-animate role="region" aria-label="Exemplo de entidade FIWARE NGSIv2">
+<span class="cmt">// GET /v2/entities/urn:ngsi-ld:Compartment:DRAGON-C209:M-03</span>
+<span class="cmt">// Header: fiware-service: smart</span>
+{
+  <span class="key">"id"</span>:               <span class="val">"urn:ngsi-ld:Compartment:DRAGON-C209:M-03"</span>,
+  <span class="key">"type"</span>:             <span class="val">"Compartment"</span>,
+  <span class="key">"spacecraft_id"</span>:    { <span class="key">"value"</span>: <span class="val">"DRAGON-C209"</span> },
+  <span class="key">"compartment_id"</span>:  { <span class="key">"value"</span>: <span class="val">"M-03"</span> },
+  <span class="key">"current_temp"</span>:    { <span class="key">"value"</span>: <span class="val">22.4</span> },
+  <span class="key">"current_humidity"</span>: { <span class="key">"value"</span>: <span class="val">45.2</span> },
+  <span class="key">"temp_min"</span>:         { <span class="key">"value"</span>: <span class="val">18</span> },
+  <span class="key">"temp_max"</span>:         { <span class="key">"value"</span>: <span class="val">25</span> },
+  <span class="key">"humidity_max"</span>:    { <span class="key">"value"</span>: <span class="val">60</span> },
+  <span class="key">"last_impact_g"</span>:   { <span class="key">"value"</span>: <span class="val">0.1</span> },
+  <span class="key">"is_open"</span>:         { <span class="key">"value"</span>: <span class="val">false</span> },
+  <span class="key">"severity"</span>:        { <span class="key">"value"</span>: <span class="val">"normal"</span> }
+}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <span class="cta-section__eyebrow">Próxima Etapa</span>
+            <h2 id="cta-title" class="cta-section__title">Conheça Nossos Objetivos</h2>
+            <p class="cta-section__text">Veja as metas que guiaram o desenvolvimento do OrbitStock e como cada funcionalidade foi planejada para atender a missão.</p>
+            <div class="cta-section__buttons">
+                <a href="objetivos.html" class="btn btn--primary">Ver Objetivos</a>
+                <a href="beneficios.html" class="btn btn--ghost">Ver Benefícios</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="../assets/images/logo.svg" alt="Logo OrbitStock" width="32" height="32">
+                    Orbit<span>Stock</span>
+                </div>
+                <p class="footer__tagline">Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31.</p>
+            </div>
+            <nav class="footer__links" aria-label="Páginas do site">
+                <h3 class="footer__links-title">Páginas</h3>
+                <ul class="footer__links-list">
+                    <li><a href="../../index.html">O Problema</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="beneficios.html">Benefícios</a></li>
+                    <li><a href="aplicacao.html">Aplicação</a></li>
+                </ul>
+            </nav>
+            <div class="footer__links">
+                <h3 class="footer__links-title">API Endpoints</h3>
+                <ul class="footer__links-list">
+                    <li><a href="tecnologia.html">GET /fleet</a></li>
+                    <li><a href="tecnologia.html">GET /telemetry/events/:id</a></li>
+                    <li><a href="tecnologia.html">POST /predictions/generate</a></li>
+                    <li><a href="tecnologia.html">POST /items/:id/consume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 OrbitStock · Todos os direitos reservados</p>
+            <p class="footer__fiap">Desenvolvido para a <a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a> · Global Solution 2026 · Turma MIAO</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+

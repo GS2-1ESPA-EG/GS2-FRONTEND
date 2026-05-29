@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitStock no dia a dia da missão: como astronautas e controladores de missão usam o sistema para manter a Dragon C209 segura e eficiente.">
+    <title>OrbitStock | Aplicação</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <div class="container">
+        <nav class="nav" role="navigation" aria-label="Navegação principal">
+            <a href="../../index.html" class="nav__logo" aria-label="OrbitStock — página inicial">
+                <img src="../assets/images/logo.svg" alt="Logo OrbitStock" class="nav__logo-img">
+                <span class="nav__logo-text">Orbit<span>Stock</span></span>
+            </a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="nav-menu" role="list">
+                <li><a href="../../index.html" class="nav-link">Problema</a></li>
+                <li><a href="tecnologia.html" class="nav-link">Tecnologia</a></li>
+                <li><a href="objetivos.html" class="nav-link">Objetivos</a></li>
+                <li><a href="beneficios.html" class="nav-link">Benefícios</a></li>
+                <li><a href="aplicacao.html" class="nav-link">Aplicação</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-title">
+        <canvas id="stars-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    Uso Operacional
+                </div>
+                <h1 id="hero-title" class="hero__title">
+                    OrbitStock no Dia a Dia da Missão
+                </h1>
+                <p class="hero__subtitle">
+                    Dois mundos conectados em tempo real: a cápsula Dragon a <strong>400km de altitude</strong> e o Centro de Controle de Missão na Terra — cada detalhe monitorado, cada decisão apoiada por dados.
+                </p>
+                <div class="hero__cta">
+                    <a href="#personas" class="btn btn--primary">Ver Usuários</a>
+                    <a href="#workflow" class="btn btn--secondary">Ver Fluxo</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <img src="../assets/icons/users.svg"
+                     alt="Ícone de dois usuários representando o astronauta a bordo e o controlador de missão em terra"
+                     class="hero__img"
+                     style="max-width:280px">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PERSONAS ── -->
+    <section class="section section--alt" id="personas" aria-labelledby="personas-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Usuários do Sistema</span>
+                <h2 id="personas-title" class="section__title">
+                    Quem Usa o <span>OrbitStock</span>
+                </h2>
+                <p class="section__subtitle">
+                    O OrbitStock foi projetado para dois perfis distintos com necessidades complementares: a tripulação a bordo e a equipe de controle em terra.
+                </p>
+            </div>
+
+            <div class="cards-grid cards-grid--2">
+                <article class="persona-card" data-animate data-delay="1">
+                    <div class="persona-card__avatar">
+                        <img src="../assets/icons/rocket.svg" alt="Ícone representando o astronauta a bordo da Dragon" width="40" height="40">
+                    </div>
+                    <div class="persona-card__role">A Bordo · Dragon C209</div>
+                    <h3 class="persona-card__name">Astronauta de Missão</h3>
+                    <div class="persona-card__tasks" role="list">
+                        <div class="persona-task" role="listitem">Acessa o AstronautApp via tablet de bordo</div>
+                        <div class="persona-task" role="listitem">Verifica estoque por compartimento, categoria ou código</div>
+                        <div class="persona-task" role="listitem">Registra consumo de suprimentos com baixa imediata</div>
+                        <div class="persona-task" role="listitem">Recebe alertas de temperatura, umidade e impacto</div>
+                        <div class="persona-task" role="listitem">Resolve alertas ativos após ação corretiva</div>
+                        <div class="persona-task" role="listitem">Consulta cronômetro T+ de missão em tempo real</div>
+                    </div>
+                </article>
+
+                <article class="persona-card" data-animate data-delay="2">
+                    <div class="persona-card__avatar" style="background: var(--clr-green-dim); border-color: rgba(0,255,136,0.3);">
+                        <img src="../assets/icons/chart.svg" alt="Ícone representando o controlador de missão no centro de controle" width="40" height="40">
+                    </div>
+                    <div class="persona-card__role" style="color: var(--clr-green);">Centro de Controle · Terra</div>
+                    <h3 class="persona-card__name">Controlador de Missão</h3>
+                    <div class="persona-card__tasks" role="list">
+                        <div class="persona-task" role="listitem">Monitora dashboard em tempo real com KPIs da missão</div>
+                        <div class="persona-task" role="listitem">Analisa gráficos de telemetria das últimas 6 horas</div>
+                        <div class="persona-task" role="listitem">Recebe e gerencia alertas críticos automaticamente</div>
+                        <div class="persona-task" role="listitem">Gera relatórios preditivos com Claude AI sob demanda</div>
+                        <div class="persona-task" role="listitem">Planeja reabastecimento com base nas projeções de consumo</div>
+                        <div class="persona-task" role="listitem">Monitora saúde de todas as 12 naves simultaneamente</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WORKFLOW ── -->
+    <section class="section" id="workflow" aria-labelledby="workflow-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Fluxo Operacional</span>
+                <h2 id="workflow-title" class="section__title">
+                    Do Sensor ao <span>Alerta Resolvido</span>
+                </h2>
+                <p class="section__subtitle">
+                    Sete etapas que transformam uma leitura de sensor numa decisão apoiada por Inteligência Artificial.
+                </p>
+            </div>
+
+            <div class="steps" role="list">
+                <div class="step" data-animate role="listitem">
+                    <div class="step__number" aria-hidden="true">1</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Sensor Detecta Variação</h3>
+                        <p class="step__text">O ESP32 no compartimento M-03 registra temperatura de 28°C — acima do limite nominal de 25°C. O hardware publica imediatamente os dados no FIWARE Orion.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="1" role="listitem">
+                    <div class="step__number" aria-hidden="true">2</div>
+                    <div class="step__content">
+                        <h3 class="step__title">FIWARE Orion Atualiza Contexto</h3>
+                        <p class="step__text">O Context Broker NGSIv2 atualiza a entidade <code>urn:ngsi-ld:Compartment:DRAGON-C209:M-03</code> com o novo valor de temperatura e timestamp.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="2" role="listitem">
+                    <div class="step__number" aria-hidden="true">3</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Backend Processa o Evento</h3>
+                        <p class="step__text">O Orion Poller Service detecta a mudança no próximo ciclo de 3 segundos. O evento de telemetria é validado com Zod e persistido no banco SQLite com timestamp preciso.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="3" role="listitem">
+                    <div class="step__number" aria-hidden="true">4</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Alerta Warning Criado</h3>
+                        <p class="step__text">O Alert Service compara 28°C com o limite de 25°C do compartimento M-03 e gera um alerta de tipo <strong>temperature</strong>, severidade <strong>warning</strong>, automaticamente.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="4" role="listitem">
+                    <div class="step__number" aria-hidden="true">5</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Notificação em Tempo Real</h3>
+                        <p class="step__text">O Dashboard e o AstronautApp exibem o alerta imediatamente na próxima atualização (máximo 5 segundos). O painel de KPIs atualiza o contador de alertas críticos.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="5" role="listitem">
+                    <div class="step__number" aria-hidden="true">6</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Claude AI Analisa a Tendência</h3>
+                        <p class="step__text">O controlador solicita análise preditiva. O Claude recebe o histórico de telemetria das últimas 6h, calcula a regressão linear e gera recomendação: "Verificar ventilação M-03. Tendência de +0.4°C/hora. Risco de critical em ~4h."</p>
+                    </div>
+                </div>
+
+                <div class="step" data-animate data-delay="6" role="listitem">
+                    <div class="step__number" aria-hidden="true">7</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Astronauta Age e Resolve</h3>
+                        <p class="step__text">O astronauta ajusta a ventilação do compartimento M-03 usando o AstronautApp. Após normalização da temperatura, marca o alerta como resolvido. O sistema registra o evento de resolução no histórico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── USE CASE TABS ── -->
+    <section class="section section--alt" aria-labelledby="usecases-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Cenários de Uso</span>
+                <h2 id="usecases-title" class="section__title">
+                    Situações Reais de <span>Missão</span>
+                </h2>
+            </div>
+
+            <div class="tabs" data-animate role="tablist" aria-label="Cenários de uso do OrbitStock">
+                <div class="tabs__nav">
+                    <button class="tab-btn tab-btn--active"
+                            data-tab-btn="temp" data-tab-group="cases"
+                            role="tab" aria-selected="true" aria-controls="panel-temp">
+                        🌡️ Temperatura
+                    </button>
+                    <button class="tab-btn"
+                            data-tab-btn="stock" data-tab-group="cases"
+                            role="tab" aria-selected="false" aria-controls="panel-stock">
+                        📦 Estoque
+                    </button>
+                    <button class="tab-btn"
+                            data-tab-btn="impact" data-tab-group="cases"
+                            role="tab" aria-selected="false" aria-controls="panel-impact">
+                        💥 Impacto
+                    </button>
+                </div>
+
+                <div id="panel-temp" class="tab-panel tab-panel--active"
+                     data-tab-panel="temp" data-tab-group="cases"
+                     role="tabpanel">
+                    <div class="cards-grid cards-grid--2" style="gap: var(--space-6)">
+                        <div>
+                            <h3 style="font-size: var(--text-xl); font-weight:700; color: var(--clr-text-primary); margin-bottom: var(--space-4);">Cenário: Alerta de Temperatura</h3>
+                            <p style="margin-bottom: var(--space-4);">Sensor no compartimento M-03 detecta temperatura subindo gradualmente de 22°C para 28°C ao longo de 2 horas.</p>
+                            <ul class="footer__links-list" style="display:flex; flex-direction:column; gap: var(--space-3);">
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-warning); flex-shrink:0;">⚡</span>
+                                    Alerta warning gerado ao ultrapassar temp_max (25°C)
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-cyan); flex-shrink:0;">📊</span>
+                                    Dashboard exibe tendência nos gráficos das últimas 6h
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-green); flex-shrink:0;">🤖</span>
+                                    Claude AI projeta atingir temperatura crítica em 4h
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-green); flex-shrink:0;">✅</span>
+                                    Astronauta age preventivamente e resolve antes do crítico
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="code-block" style="font-size: var(--text-xs);">
+<span class="cmt">// Alerta gerado automaticamente</span>
+{
+  <span class="key">"type"</span>:        <span class="val">"temperature"</span>,
+  <span class="key">"severity"</span>:    <span class="val">"warning"</span>,
+  <span class="key">"compartment"</span>: <span class="val">"M-03"</span>,
+  <span class="key">"value"</span>:       <span class="val">28.0</span>,
+  <span class="key">"limit"</span>:       <span class="val">25.0</span>,
+  <span class="key">"message"</span>:     <span class="val">"Temperatura 12% acima do limite"</span>,
+  <span class="key">"resolved"</span>:    <span class="val">false</span>
+}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-stock" class="tab-panel"
+                     data-tab-panel="stock" data-tab-group="cases"
+                     role="tabpanel">
+                    <div class="cards-grid cards-grid--2" style="gap: var(--space-6)">
+                        <div>
+                            <h3 style="font-size: var(--text-xl); font-weight:700; color: var(--clr-text-primary); margin-bottom: var(--space-4);">Cenário: Gestão de Estoque</h3>
+                            <p style="margin-bottom: var(--space-4);">Astronauta acessa o AstronautApp para registrar o consumo diário de rações e verificar o estoque de medicamentos.</p>
+                            <ul class="footer__links-list" style="display:flex; flex-direction:column; gap: var(--space-3);">
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-cyan); flex-shrink:0;">🔍</span>
+                                    Busca "Food-Pack-A" — encontra em 0.2s no banco
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-orange); flex-shrink:0;">📦</span>
+                                    Registra consumo: 45 → 42 unidades (–3)
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-green); flex-shrink:0;">🤖</span>
+                                    IA projeta depleção em 14 dias com consumo atual
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-cyan); flex-shrink:0;">📡</span>
+                                    Controlador recebe relatório e planeja reabastecimento
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="code-block" style="font-size: var(--text-xs);">
+<span class="cmt">// POST /api/items/ITEM-042/consume</span>
+{
+  <span class="key">"amount"</span>: <span class="val">3</span>
+}
+
+<span class="cmt">// Resposta</span>
+{
+  <span class="key">"item"</span>:      <span class="val">"Food-Pack-A"</span>,
+  <span class="key">"previous"</span>: <span class="val">45</span>,
+  <span class="key">"current"</span>:  <span class="val">42</span>,
+  <span class="key">"days_left"</span>: <span class="val">14</span>
+}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-impact" class="tab-panel"
+                     data-tab-panel="impact" data-tab-group="cases"
+                     role="tabpanel">
+                    <div class="cards-grid cards-grid--2" style="gap: var(--space-6)">
+                        <div>
+                            <h3 style="font-size: var(--text-xl); font-weight:700; color: var(--clr-text-primary); margin-bottom: var(--space-4);">Cenário: Alerta de Micro-Impacto</h3>
+                            <p style="margin-bottom: var(--space-4);">Sensor acelerômetro registra micro-impacto de 4.5G no compartimento M-07 — potencial debris orbital ou docagem brusca.</p>
+                            <ul class="footer__links-list" style="display:flex; flex-direction:column; gap: var(--space-3);">
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-danger); flex-shrink:0;">🚨</span>
+                                    Alerta CRÍTICO gerado (4.5G ≥ threshold de 5G warning)
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-warning); flex-shrink:0;">📡</span>
+                                    Controlador e astronauta notificados simultaneamente
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-cyan); flex-shrink:0;">🔍</span>
+                                    Astronauta inicia inspeção visual do compartimento M-07
+                                </li>
+                                <li style="display:flex; gap:var(--space-3); align-items:flex-start; color: var(--clr-text-secondary); font-size: var(--text-sm);">
+                                    <span style="color: var(--clr-green); flex-shrink:0;">✅</span>
+                                    Inspeção concluída sem danos — alerta resolvido com nota
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="code-block" style="font-size: var(--text-xs);">
+<span class="cmt">// Alerta crítico de impacto</span>
+{
+  <span class="key">"type"</span>:        <span class="val">"impact"</span>,
+  <span class="key">"severity"</span>:    <span class="val">"warning"</span>,
+  <span class="key">"compartment"</span>: <span class="val">"M-07"</span>,
+  <span class="key">"value"</span>:       <span class="val">4.5</span>,
+  <span class="key">"unit"</span>:        <span class="val">"G"</span>,
+  <span class="key">"threshold"</span>:   <span class="val">3.0</span>,
+  <span class="key">"timestamp"</span>:   <span class="val">"2026-05-29T14:32:07Z"</span>
+}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ADDITIONAL CARDS ── -->
+    <section class="section" aria-labelledby="features-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Funcionalidades em Destaque</span>
+                <h2 id="features-title" class="section__title">
+                    Tudo que a Missão <span>Precisa</span>
+                </h2>
+            </div>
+            <div class="cards-grid cards-grid--3">
+                <article class="card" data-animate data-delay="1">
+                    <div class="card__icon">
+                        <img src="../assets/icons/clock.svg" alt="Ícone de cronômetro de missão T+" width="28" height="28">
+                    </div>
+                    <h3 class="card__title">Cronômetro T+ de Missão</h3>
+                    <p class="card__text">
+                        O AstronautApp exibe o tempo decorrido desde o início da missão (T+) em tempo real, com dias, horas, minutos e segundos — essencial para o contexto operacional dos astronautas.
+                    </p>
+                </article>
+                <article class="card card--green" data-animate data-delay="2">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/brain.svg" alt="Ícone de IA para relatórios preditivos em linguagem natural" width="28" height="28">
+                    </div>
+                    <h3 class="card__title">Relatórios em Linguagem Natural</h3>
+                    <p class="card__text">
+                        Claude AI gera relatórios completos em português brasileiro: resumo executivo, nível de risco (baixo/médio/alto), lista de recomendações priorizadas e nota de confiança baseada no R² da regressão.
+                    </p>
+                </article>
+                <article class="card card--orange" data-animate data-delay="3">
+                    <div class="card__icon card__icon--orange">
+                        <img src="../assets/icons/satellite.svg" alt="Ícone de satélite para integração IoT em tempo real" width="28" height="28">
+                    </div>
+                    <h3 class="card__title">Integração IoT em Tempo Real</h3>
+                    <p class="card__text">
+                        Pipeline completo ESP32 → FIWARE Orion → Backend → Frontend com polling de 3 segundos. A temperatura e umidade do compartimento M-03 são atualizadas automaticamente sem nenhuma ação do usuário.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA FINAL ── -->
+    <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <span class="cta-section__eyebrow">Projeto Acadêmico</span>
+            <h2 id="cta-title" class="cta-section__title">OrbitStock — Global Solution 2026</h2>
+            <p class="cta-section__text">
+                O OrbitStock foi desenvolvido na FIAP como prova de que tecnologias modernas de IoT, cloud e IA podem resolver problemas reais e críticos — até nas missões mais extremas da humanidade.
+            </p>
+            <div class="cta-section__buttons">
+                <a href="../../index.html" class="btn btn--primary">Conhecer o Problema</a>
+                <a href="tecnologia.html" class="btn btn--ghost">Ver a Tecnologia</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="../assets/images/logo.svg" alt="Logo OrbitStock" width="32" height="32">
+                    Orbit<span>Stock</span>
+                </div>
+                <p class="footer__tagline">Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31. Monitoramento em tempo real, alertas preventivos e análise preditiva com IA.</p>
+            </div>
+            <nav class="footer__links" aria-label="Páginas do site">
+                <h3 class="footer__links-title">Páginas</h3>
+                <ul class="footer__links-list">
+                    <li><a href="../../index.html">O Problema</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="beneficios.html">Benefícios</a></li>
+                    <li><a href="aplicacao.html">Aplicação</a></li>
+                </ul>
+            </nav>
+            <div class="footer__links">
+                <h3 class="footer__links-title">Contato</h3>
+                <ul class="footer__links-list">
+                    <li><a href="mailto:gustavohiruo@gmail.com">gustavohiruo@gmail.com</a></li>
+                    <li><a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a></li>
+                    <li><a href="../../index.html">Global Solution 2026</a></li>
+                    <li><a href="../../index.html">Turma MIAO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 OrbitStock · Todos os direitos reservados</p>
+            <p class="footer__fiap">Desenvolvido para a <a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a> · Global Solution 2026 · Turma MIAO</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+

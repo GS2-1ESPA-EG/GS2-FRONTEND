@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitStock — Benefícios reais: maior segurança para a tripulação, decisões baseadas em dados, eficiência operacional e previsibilidade de missão.">
+    <title>OrbitStock | Benefícios</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <div class="container">
+        <nav class="nav" role="navigation" aria-label="Navegação principal">
+            <a href="../../index.html" class="nav__logo" aria-label="OrbitStock — página inicial">
+                <img src="../assets/images/logo.svg" alt="Logo OrbitStock" class="nav__logo-img">
+                <span class="nav__logo-text">Orbit<span>Stock</span></span>
+            </a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="nav-menu" role="list">
+                <li><a href="../../index.html" class="nav-link">Problema</a></li>
+                <li><a href="tecnologia.html" class="nav-link">Tecnologia</a></li>
+                <li><a href="objetivos.html" class="nav-link">Objetivos</a></li>
+                <li><a href="beneficios.html" class="nav-link">Benefícios</a></li>
+                <li><a href="aplicacao.html" class="nav-link">Aplicação</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-title">
+        <canvas id="stars-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot" aria-hidden="true"></span>
+                    Impacto Real
+                </div>
+                <h1 id="hero-title" class="hero__title">
+                    Benefícios do OrbitStock
+                </h1>
+                <p class="hero__subtitle">
+                    De alertas em <strong>tempo real</strong> a relatórios de IA em linguagem natural: como o OrbitStock transforma a segurança da tripulação e a eficiência da missão Dragon CRS-31.
+                </p>
+                <div class="hero__cta">
+                    <a href="#benefits" class="btn btn--primary">Ver Benefícios</a>
+                    <a href="#comparison" class="btn btn--secondary">Antes e Depois</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <img src="../assets/icons/shield.svg"
+                     alt="Ícone de escudo com checkmark representando segurança e proteção da missão espacial"
+                     class="hero__img"
+                     style="max-width:280px">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS ── -->
+    <div class="stats-bar" role="region" aria-label="Números de impacto do OrbitStock">
+        <div class="container">
+            <div class="stat-item" data-animate>
+                <span class="stat-item__number" data-target="39">0</span>
+                <span class="stat-item__label">Tipos de itens rastreados automaticamente</span>
+            </div>
+            <div class="stat-item stat-item--green" data-animate data-delay="1">
+                <span class="stat-item__number" data-target="4">0</span>
+                <span class="stat-item__label">Níveis de alerta automático</span>
+            </div>
+            <div class="stat-item" data-animate data-delay="2">
+                <span class="stat-item__number" data-target="12">0</span>
+                <span class="stat-item__label">Compartimentos simultâneos</span>
+            </div>
+            <div class="stat-item stat-item--orange" data-animate data-delay="3">
+                <span class="stat-item__number" data-target="3" data-suffix="s">&lt;</span>
+                <span class="stat-item__label">Detecção de anomalia</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── BENEFITS GRID ── -->
+    <section class="section" id="benefits" aria-labelledby="benefits-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Por que OrbitStock</span>
+                <h2 id="benefits-title" class="section__title">
+                    Seis Benefícios que <span>Mudam a Missão</span>
+                </h2>
+                <p class="section__subtitle">
+                    Cada funcionalidade foi desenvolvida para resolver um problema real da logística espacial e reduzir o risco para a tripulação.
+                </p>
+            </div>
+
+            <div class="cards-grid cards-grid--3">
+                <article class="card card--green" data-animate data-delay="1">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/shield.svg" alt="Ícone de escudo para segurança da tripulação" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Segurança</span>
+                    <h3 class="card__title">Segurança da Tripulação</h3>
+                    <p class="card__text">
+                        Alertas automáticos de temperatura crítica, umidade excessiva e impactos acima de 5G chegam ao astronauta e ao controlador de missão em menos de 3 segundos — antes que qualquer dano ocorra.
+                    </p>
+                </article>
+
+                <article class="card card--green" data-animate data-delay="2">
+                    <div class="card__icon card__icon--green">
+                        <img src="../assets/icons/brain.svg" alt="Ícone de rede neural para decisões baseadas em dados" width="28" height="28">
+                    </div>
+                    <span class="badge badge--green">Inteligência</span>
+                    <h3 class="card__title">Decisões Baseadas em Dados</h3>
+                    <p class="card__text">
+                        A análise preditiva com Claude AI transforma dados brutos de telemetria em relatórios acionáveis em linguagem natural. Nível de risco, tendências e recomendações priorizadas — sem precisar interpretar gráficos.
+                    </p>
+                </article>
+
+                <article class="card" data-animate data-delay="3">
+                    <div class="card__icon">
+                        <img src="../assets/icons/clock.svg" alt="Ícone de relógio para eficiência operacional" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Eficiência</span>
+                    <h3 class="card__title">Eficiência Operacional</h3>
+                    <p class="card__text">
+                        Astronautas eliminam verificações manuais periódicas de estoque e condições ambientais. O sistema monitora tudo automaticamente, liberando tempo para atividades científicas e de maior valor.
+                    </p>
+                </article>
+
+                <article class="card" data-animate data-delay="4">
+                    <div class="card__icon">
+                        <img src="../assets/icons/database.svg" alt="Ícone de banco de dados para rastreabilidade total" width="28" height="28">
+                    </div>
+                    <span class="badge badge--cyan">Rastreabilidade</span>
+                    <h3 class="card__title">Rastreabilidade Total</h3>
+                    <p class="card__text">
+                        Histórico completo de cada item consumido, cada evento de telemetria e cada alerta gerado — tudo persistido no SQLite. Auditoria completa da missão disponível a qualquer momento.
+                    </p>
+                </article>
+
+                <article class="card card--orange" data-animate data-delay="5">
+                    <div class="card__icon card__icon--orange">
+                        <img src="../assets/icons/bell.svg" alt="Ícone de sino para resposta imediata a alertas" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Resposta</span>
+                    <h3 class="card__title">Resposta em Tempo Real</h3>
+                    <p class="card__text">
+                        Alertas chegam no momento da anomalia, não no próximo relatório de missão ou na próxima inspeção manual. O controlador de missão pode agir imediatamente mesmo a 400km de altitude.
+                    </p>
+                </article>
+
+                <article class="card card--orange" data-animate data-delay="6">
+                    <div class="card__icon card__icon--orange">
+                        <img src="../assets/icons/chart.svg" alt="Ícone de gráfico para previsibilidade de missão" width="28" height="28">
+                    </div>
+                    <span class="badge badge--orange">Previsibilidade</span>
+                    <h3 class="card__title">Previsibilidade de Missão</h3>
+                    <p class="card__text">
+                        Projeção de consumo de itens críticos com estimativa de depleção. A tripulação e o Centro de Controle podem planejar reabastecimento com semanas de antecedência baseados em dados reais.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── BEFORE / AFTER ── -->
+    <section class="section section--alt" id="comparison" aria-labelledby="comparison-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Transformação</span>
+                <h2 id="comparison-title" class="section__title">
+                    Antes e Depois do <span>OrbitStock</span>
+                </h2>
+            </div>
+
+            <div class="comparison" data-animate>
+                <div class="comparison-col comparison-col--before">
+                    <div class="comparison-col__header">
+                        <span aria-hidden="true">✗</span>
+                        Antes do OrbitStock
+                    </div>
+                    <ul class="comparison-col__list" role="list">
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Checklists manuais em papel atualizados a cada 6h</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Falhas ambientais descobertas apenas na inspeção periódica</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Sem histórico estruturado de consumo de suprimentos</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Latência de comunicação impossibilita resposta terrestre imediata</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Previsão de reabastecimento era estimativa subjetiva</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">⚠️</span>
+                            <span>Astronautas gastavam horas em verificações de rotina</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison-col comparison-col--after">
+                    <div class="comparison-col__header">
+                        <span aria-hidden="true">✓</span>
+                        Com o OrbitStock
+                    </div>
+                    <ul class="comparison-col__list" role="list">
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Monitoramento automático contínuo com polling a cada 3 segundos</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Alertas automáticos em menos de 3s após detecção da anomalia</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Histórico completo de consumo persistido no banco de dados</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Astronauta autônomo com AstronautApp — decisão local imediata</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Previsão de depleção com regressão linear + validação R² do Claude AI</span>
+                        </li>
+                        <li class="comparison-col__item">
+                            <span aria-hidden="true">✅</span>
+                            <span>Monitoramento delegado ao sistema, foco humano em atividades críticas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── QUOTE ── -->
+    <section class="section" aria-label="Impacto do OrbitStock">
+        <div class="container">
+            <div class="quote-block" data-animate>
+                <span class="quote-block__icon" aria-hidden="true">"</span>
+                <p class="quote-block__text">
+                    Com o OrbitStock, a Dragon C209 tem um co-piloto digital permanente. Cada anomalia é detectada e reportada antes de se tornar um problema crítico. Não monitoramos apenas carga — monitoramos a possibilidade de sucesso da missão.
+                </p>
+                <cite class="quote-block__author">— Equipe OrbitStock · FIAP MIAO 2026</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── IMPACT NUMBERS ── -->
+    <section class="section section--dark" aria-labelledby="impact-title">
+        <div class="container">
+            <div class="section__header" data-animate>
+                <span class="section__eyebrow">Em Números</span>
+                <h2 id="impact-title" class="section__title">O Impacto do Sistema</h2>
+            </div>
+            <div class="kpi-grid" data-animate>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="1138">0</div>
+                    <div class="kpi-item__label">Unidades monitoradas automaticamente</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="6" data-suffix="h→3s">–</div>
+                    <div class="kpi-item__label">Melhoria na latência de atualização</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="100" data-suffix="%">0</div>
+                    <div class="kpi-item__label">Dos alertas gerados automaticamente</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-item__value" data-target="0">0</div>
+                    <div class="kpi-item__label">Dependências externas no banco de dados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <span class="cta-section__eyebrow">Na Prática</span>
+            <h2 id="cta-title" class="cta-section__title">Veja o OrbitStock em Ação</h2>
+            <p class="cta-section__text">Descubra como astronautas e controladores de missão usam o OrbitStock no dia a dia para manter a Dragon C209 segura e eficiente.</p>
+            <div class="cta-section__buttons">
+                <a href="aplicacao.html" class="btn btn--primary">Ver Aplicação</a>
+                <a href="tecnologia.html" class="btn btn--ghost">Voltar à Tecnologia</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="../assets/images/logo.svg" alt="Logo OrbitStock" width="32" height="32">
+                    Orbit<span>Stock</span>
+                </div>
+                <p class="footer__tagline">Sistema inteligente de gerenciamento de carga espacial para a missão Dragon CRS-31.</p>
+            </div>
+            <nav class="footer__links" aria-label="Páginas do site">
+                <h3 class="footer__links-title">Páginas</h3>
+                <ul class="footer__links-list">
+                    <li><a href="../../index.html">O Problema</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="beneficios.html">Benefícios</a></li>
+                    <li><a href="aplicacao.html">Aplicação</a></li>
+                </ul>
+            </nav>
+            <div class="footer__links">
+                <h3 class="footer__links-title">Benefícios</h3>
+                <ul class="footer__links-list">
+                    <li><a href="#benefits">Segurança da Tripulação</a></li>
+                    <li><a href="#benefits">Decisões por Dados</a></li>
+                    <li><a href="#benefits">Eficiência Operacional</a></li>
+                    <li><a href="#comparison">Antes e Depois</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 OrbitStock · Todos os direitos reservados</p>
+            <p class="footer__fiap">Desenvolvido para a <a href="https://www.fiap.com.br" target="_blank" rel="noopener">FIAP</a> · Global Solution 2026 · Turma MIAO</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+

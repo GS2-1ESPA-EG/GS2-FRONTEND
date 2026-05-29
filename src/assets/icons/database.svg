@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- cylinder bottom -->
+  <ellipse cx="32" cy="50" rx="18" ry="6" fill="#0d1b2a" stroke="#00d4ff" stroke-width="1.5"/>
+  <!-- cylinder sides -->
+  <line x1="14" y1="24" x2="14" y2="50" stroke="#00d4ff" stroke-width="1.5"/>
+  <line x1="50" y1="24" x2="50" y2="50" stroke="#00d4ff" stroke-width="1.5"/>
+  <!-- cylinder top -->
+  <ellipse cx="32" cy="24" rx="18" ry="6" fill="#00d4ff" opacity="0.2" stroke="#00d4ff" stroke-width="1.5"/>
+  <ellipse cx="32" cy="24" rx="9" ry="3" fill="#00d4ff" opacity="0.5"/>
+  <!-- mid ring 1 -->
+  <path d="M14 33 Q32 39 50 33" stroke="#00d4ff" stroke-width="1" opacity="0.4" fill="none"/>
+  <!-- mid ring 2 -->
+  <path d="M14 42 Q32 48 50 42" stroke="#00d4ff" stroke-width="1" opacity="0.4" fill="none"/>
+  <!-- glow dot -->
+  <circle cx="38" cy="24" r="2" fill="#00ff88"/>
+</svg>
